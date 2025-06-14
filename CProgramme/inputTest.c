@@ -3,9 +3,9 @@
 int main() {
     int x;
     int *ptrx = &x;
-    printf("Input: ");
+    printf("Enter something and I will tell you the RAM Adress of it! \nInput: ");
     scanf("%d", &x);
-    printf("%p", (void *) ptrx);
+    printf("This variable resides at: %p", (void *) ptrx);
 
     return 0;
 }
