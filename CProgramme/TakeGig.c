@@ -27,6 +27,7 @@ int main() {
 
     printf("Enter y to free the Gigabyte: ");
 
+    scanf(" %c", &freeGig);
     if (freeGig == 'y') {
         free(takenUpGig);
         return 0;
