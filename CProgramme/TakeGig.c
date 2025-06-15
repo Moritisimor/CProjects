@@ -1,10 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define SUCCESS     0
+#define NOMALLOC    1
+#define NOFREE      2
+#define MALLOCFAIL  3
+
 int main() {
     char goAhead;
     char freeGig;
-    ulong gig = 1024 * 1024 * 1024;
+    unsigned long gig = 1024 * 1024 * 1024;
     char *takenUpGig = NULL;
 
     printf("Warning, this program may cause your PC to crash or freeze. \nWould you like a Gigabyte of RAM to be taken away? \nEnter y to confirm: ");
@@ -22,7 +27,6 @@ int main() {
 
     printf("Enter y to free the Gigabyte: ");
 
-    getchar();
     if (freeGig == 'y') {
         free(takenUpGig);
         return 0;
