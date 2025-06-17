@@ -19,10 +19,10 @@ int main() {
             takenUpGig = malloc(gig);
             if (takenUpGig == NULL) {
                 printf("Could not allocate memory. \nExiting...");
-                return 3;
+                return MALLOCFAIL;
             }
     } else {
-        return 1;
+        return NOMALLOC;
     }
 
     printf("Enter y to free the Gigabyte: ");
@@ -30,9 +30,9 @@ int main() {
     scanf(" %c", &freeGig);
     if (freeGig == 'y') {
         free(takenUpGig);
-        return 0;
+        return SUCCESS;
     } else {
         printf("Why didn't you free me?");
-        return 2;
+        return NOFREE;
     }
 }
