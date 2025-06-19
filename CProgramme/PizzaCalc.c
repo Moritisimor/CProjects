@@ -1,19 +1,10 @@
 // PizzaRechner.py rewritten in C!
 
 #include <stdio.h>
-#include <stdlib.h>
 
 #define PI 3.14159
 #define SUCCESS 0
 #define WRONGTYPE 1
-
-void clearconsole() {
-    #ifdef _WIN32
-        system("cls");
-    #else
-        system("clear");
-    #endif
-}
 
 int main() {
     float radius1, radius2, price1, price2, pricepersqcm1, pricepersqcm2;
@@ -35,8 +26,7 @@ int main() {
     int returnPrice2 = scanf(" %f", &price2);
 
     if (returnPrice1 != 1 || returnPrice2 != 1 || returnRadius1 != 1 || returnRadius2 != 1) {
-        clearconsole();
-        printf("\nAn Error has occurred!\nYou either typed a string, a character or used , instead of . for floating point integers.\nExiting...");
+        printf("\n\n\nAn Error has occurred!\nYou either typed a string, a character or used , instead of . for floating point integers.\nExiting...\n");
         return WRONGTYPE;
     }
 
