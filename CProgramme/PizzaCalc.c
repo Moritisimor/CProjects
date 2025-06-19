@@ -34,9 +34,9 @@ int main() {
     pricepersqcm2 = (PI * radius2 * radius2) / price2;
 
     if (pricepersqcm1 > pricepersqcm2) {
-        printf("The 1st pizza offers more value per square cm.");
+        printf("The 1st pizza offers more value per square cm.\n");
     } else {
-        printf("The 2nd pizza offers more value per square cm.");
+        printf("The 2nd pizza offers more value per square cm.\n");
     }
 
     return SUCCESS;
