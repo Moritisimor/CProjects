@@ -11,8 +11,6 @@ int main() {
 
     printf("Welcome to the Pizza Calculator! \nThis tool will tell you, which of two pizzas costs less per square cm.");
 
-    // INPUT REGION
-
     printf("\nEnter the radius of the 1st pizza in cm: ");
     int returnRadius1 = scanf(" %f", &radius1);
 
@@ -30,8 +28,8 @@ int main() {
         return WRONGTYPE;
     }
 
-    pricepersqcm1 = (PI * radius1 * radius1) / price1;
-    pricepersqcm2 = (PI * radius2 * radius2) / price2;
+    pricepersqcm1 = price1 / (PI * radius1 * radius1);
+    pricepersqcm2 = price2 / (PI * radius2 * radius2);
 
     if (pricepersqcm1 > pricepersqcm2) {
         printf("The 1st pizza offers more value per square cm.\n");
