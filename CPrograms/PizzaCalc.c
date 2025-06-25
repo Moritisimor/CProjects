@@ -7,21 +7,21 @@
 #define WRONGTYPE 1
 
 int main() {
-    float radius1, radius2, price1, price2, pricepersqcm1, pricepersqcm2;
+    double radius1, radius2, price1, price2, pricepersqcm1, pricepersqcm2;
 
     printf("Welcome to the Pizza Calculator! \nThis tool will tell you, which of two pizzas costs less per square cm.");
 
     printf("\nEnter the radius of the 1st pizza in cm: ");
-    int returnRadius1 = scanf(" %f", &radius1);
+    int returnRadius1 = scanf(" %lf", &radius1);
 
     printf("Enter the radius of the 2nd pizza in cm: ");
-    int returnRadius2 = scanf(" %f", &radius2);
+    int returnRadius2 = scanf(" %lf", &radius2);
 
     printf("Enter the Price of the 1st pizza: ");
-    int returnPrice1 = scanf(" %f", &price2);
+    int returnPrice1 = scanf(" %lf", &price2);
 
     printf("Enter the price of the 2nd pizza: ");
-    int returnPrice2 = scanf(" %f", &price2);
+    int returnPrice2 = scanf(" %lf", &price2);
 
     if (returnPrice1 != 1 || returnPrice2 != 1 || returnRadius1 != 1 || returnRadius2 != 1) {
         printf("\n\n\nAn Error has occurred!\nYou either typed a string, a character or used , instead of . for floating point integers.\nExiting...\n");
