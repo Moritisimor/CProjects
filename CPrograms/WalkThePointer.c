@@ -6,7 +6,7 @@ int main(void) {
     coolarrayptr = coolarray;
 
     for (int i = 0; i < 6; i++) {
-        printf("%d\n", *coolarrayptr);
+        printf("The adress: %p holds the value: %d\n",(void *) coolarrayptr, *coolarrayptr);
         coolarrayptr++;
     }
     return 0;
