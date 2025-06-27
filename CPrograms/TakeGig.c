@@ -17,6 +17,9 @@ int main() {
     scanf(" %c", &goAhead);
     if (goAhead == 'y') {
             takenUpGig = malloc(gig);
+            for (unsigned long i = 0; i < gig; i += 4096) {
+            takenUpGig[i] = 0;
+}
             if (takenUpGig == NULL) {
                 printf("Could not allocate memory. \nExiting...");
                 return MALLOCFAIL;
