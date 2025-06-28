@@ -13,15 +13,14 @@ int main() {
     char *takenUpGig = NULL;
 
     printf("Warning, this program may cause your PC to crash or freeze. \nWould you like a Gigabyte of RAM to be taken away? \nEnter y to confirm: ");
-
     scanf(" %c", &goAhead);
     if (goAhead == 'y') {
             takenUpGig = malloc(gig);
             for (unsigned long i = 0; i < gig; i += 4096) {
             takenUpGig[i] = 0;
-}
+            }   
             if (takenUpGig == NULL) {
-                printf("Could not allocate memory. \nExiting...");
+                printf("Could not allocate memory. \nExiting...\n");
                 return MALLOCFAIL;
             }
     } else {
@@ -29,13 +28,13 @@ int main() {
     }
 
     printf("Enter y to free the Gigabyte: ");
-
     scanf(" %c", &freeGig);
     if (freeGig == 'y') {
         free(takenUpGig);
+        printf("Memory freed succesfully\n");
         return SUCCESS;
     } else {
-        printf("Why didn't you free me?");
+        printf("Why didn't you free me?\n");
         return NOFREE;
     }
 }
