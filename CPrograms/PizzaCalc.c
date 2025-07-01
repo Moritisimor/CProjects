@@ -14,11 +14,11 @@ int main() {
     printf("\nEnter the radius of the 1st pizza in cm: ");
     int returnRadius1 = scanf(" %lf", &radius1);
 
-    printf("Enter the radius of the 2nd pizza in cm: ");
-    int returnRadius2 = scanf(" %lf", &radius2);
+    printf("Enter the price of the 1st pizza: ");
+    int returnRadius2 = scanf(" %lf", &price1);
 
-    printf("Enter the Price of the 1st pizza: ");
-    int returnPrice1 = scanf(" %lf", &price2);
+    printf("Enter the radius of the 2nd pizza: ");
+    int returnPrice1 = scanf(" %lf", &radius2);
 
     printf("Enter the price of the 2nd pizza: ");
     int returnPrice2 = scanf(" %lf", &price2);
@@ -32,9 +32,9 @@ int main() {
     pricepersqcm2 = price2 / (PI * radius2 * radius2);
 
     if (pricepersqcm1 > pricepersqcm2) {
-        printf("The 1st pizza offers more value per square cm.\n");
+        printf("The 1st pizza costs %lf per square cm and offers more value per square cm.\n", pricepersqcm1);
     } else {
-        printf("The 2nd pizza offers more value per square cm.\n");
+        printf("The 2nd pizza costs %lf per square cm and offers more value per square cm.\n", pricepersqcm2);
     }
 
     return SUCCESS;
