@@ -33,7 +33,7 @@ int main(void) {
     fibonacci(iterations);
     return SUCCESS;
   } else {
-    printf("Invalid input! \nExiting...\n");
+    printf("Invalid input! \nDid you enter a positive integer? \nExiting...\n");
     return INVALIDINPUT;
   }
 }
