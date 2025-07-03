@@ -1,3 +1,5 @@
 /.vscode
 /CPrograms/build
 /CPrograms/build/Debug
+/.idea
+/.CompiledStuff
