@@ -7,7 +7,7 @@
 #define WRONGTYPE 1
 
 int main() {
-    double radius1, radius2, price1, price2, pricepersqcm1, pricepersqcm2;
+    double radius1, radius2, price1, price2;
 
     printf("Welcome to the Pizza Calculator! \nThis tool will tell you, which of two pizzas costs less per square cm.");
 
@@ -28,8 +28,8 @@ int main() {
         return WRONGTYPE;
     }
 
-    pricepersqcm1 = price1 / (PI * radius1 * radius1);
-    pricepersqcm2 = price2 / (PI * radius2 * radius2);
+    double pricepersqcm1 = price1 / (PI * radius1 * radius1);
+    double pricepersqcm2 = price2 / (PI * radius2 * radius2);
 
     if (pricepersqcm1 > pricepersqcm2) {
         printf("The 1st pizza costs %lf per square cm and offers more value per square cm.\n", pricepersqcm1);
