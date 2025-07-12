@@ -35,7 +35,8 @@ int main() {
         printf("Memory freed succesfully\n");
         return SUCCESS;
     } else {
-        printf("Why didn't you free me?\n");
+        printf("Freeing Memory anyway...\n");
+        free(takenUpGig);
         return NOFREE;
     }
 }
