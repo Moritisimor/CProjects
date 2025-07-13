@@ -3,19 +3,23 @@
 void showPrimitiveCheckSum(char parsee[], int length) { // Should not include null termination unless you want to print that 
   char *parseePtr = parsee;
   int sum = 0;
+  int spicer = 125;
   for (int i = 0; i < length; i++) {
     printf("The character %c holds the ASCII value %d\n",*parseePtr, (int) *parseePtr);
-    sum += (int) *parseePtr;
+    sum += (int) *parseePtr * spicer;
+    spicer += 25;
     parseePtr++;
   }
-  printf("The sum of these ASCII characters combined equals : %d\n", sum);
+  printf("The spiced-up checksum of these ASCII characters combined equals : %d\n", sum);
 }
 
 int getPrimitiveCheckSum(char parsee[], int length) {
   char *parseePtr = parsee;
   int sum = 0;
+  int spicer = 125;
   for (int i = 0; i < length; i++) {
-    sum += (int) *parseePtr;
+    sum += (int) *parseePtr * spicer;
+    spicer += 25;
     parseePtr++;
   }
   return sum;
