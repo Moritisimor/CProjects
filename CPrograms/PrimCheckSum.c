@@ -50,7 +50,7 @@ int main(void) {
 
   printf("\nComparison of string World with its checksum\n");
   printf("Checksum = %u\n", getPrimitiveCheckSum(testString2));
-  if (25344 == getPrimitiveCheckSum(testString2)) {
+  if (97583 == getPrimitiveCheckSum(testString2)) {
     printf("Probably same.\n");
   } else {
     printf("Probably not same.\n");
