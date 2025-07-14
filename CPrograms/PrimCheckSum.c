@@ -9,7 +9,7 @@ unsigned int getPrimitiveCheckSum(char parsee[]) {
     if ((int) *parseePtr % 2 == 0) {
       spicer += (int) *parseePtr;
     } else {
-      if ((spicer - (int) *parseePtr) > 0) {
+      if (spicer >= (int) *parseePtr) {
         spicer -= (int) *parseePtr; 
       } else {
         spicer += (int) *parseePtr;
