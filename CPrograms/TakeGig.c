@@ -17,7 +17,7 @@ int main() {
     if (goAhead == 'y') {
             takenUpGig = malloc(gig);
             if (takenUpGig != NULL) {
-                for (unsigned long i = 0; i < gig; i += 4096) {
+                for (unsigned long i = 0; i < gig; i += 4096) { // Write to each page so the memory actually gets allocated
                     takenUpGig[i] = 0;
                 }
             } else {
