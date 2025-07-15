@@ -2,8 +2,15 @@
 
 unsigned int getPrimitiveCheckSum(char parsee[]) {
   char *parseePtr = parsee;
+  char *harvester = parsee;
   unsigned int sum = 0;
-  int spicer = 125;
+  unsigned int spicerSum = 0;
+  unsigned int spicer = 0;
+  while(*harvester != 0) {
+    spicer += *harvester;
+    spicer /= 4;
+    harvester++;
+  }
   while (*parseePtr != 0) {
     sum += (int) *parseePtr * spicer;
     if ((int) *parseePtr % 2 == 0) {
@@ -50,7 +57,7 @@ int main(void) {
 
   printf("\nComparison of string World with its checksum\n");
   printf("Checksum = %u\n", getPrimitiveCheckSum(testString2));
-  if (97583 == getPrimitiveCheckSum(testString2)) {
+  if (54121 == getPrimitiveCheckSum(testString2)) {
     printf("Probably same.\n");
   } else {
     printf("Probably not same.\n");
