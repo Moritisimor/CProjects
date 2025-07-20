@@ -35,31 +35,7 @@ int comparePrimitiveCheckSums(char parsee1[], char parsee2[]) {
   }
 }
 
-int main(void) {
-  char testString1[] = {'H', 'e', 'l', 'l', 'o', '\0'};
-  char testString2[] = {'W', 'o', 'r', 'l', 'd', '\0'};
-  printf("Checksum of Hello = %u\n", getPrimitiveCheckSum(testString1));
-  printf("Checksum of World = %u\n", getPrimitiveCheckSum(testString2));
-  
-  printf("\nComparison of string Hello and World:\n");
-  if (comparePrimitiveCheckSums(testString1, testString2) == 1) {
-    printf("Probably same.\n");
-  } else {
-    printf("Probably not Same.\n");
-  }
-  
-  printf("\nComparison string Hello with itself:\n");
-  if (comparePrimitiveCheckSums(testString1, testString1) == 1) {
-    printf("Probably same.\n");
-  } else {
-    printf("Probably not same.\n");
-  }
-
-  printf("\nComparison of string World with its checksum\n");
-  printf("Checksum = %u\n", getPrimitiveCheckSum(testString2));
-  if (54121 == getPrimitiveCheckSum(testString2)) {
-    printf("Probably same.\n");
-  } else {
-    printf("Probably not same.\n");
-  }
+int main(int argc, char *argv[]) {
+  printf("Decimal: %u\n", getPrimitiveCheckSum(argv[1]));
+  printf("Hex: 0x%x\n", getPrimitiveCheckSum(argv[1]));
 }
