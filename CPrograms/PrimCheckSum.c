@@ -14,13 +14,9 @@ unsigned int getPrimitiveCheckSum(char parsee[]) {
   while (*parseePtr != 0) {
     sum += (int) *parseePtr * spicer;
     if ((int) *parseePtr % 2 == 0) {
-      spicer += (int) *parseePtr;
+      spicer = spicer >> (int) *parseePtr / 2;
     } else {
-      if (spicer >= (int) *parseePtr) {
-        spicer -= (int) *parseePtr; 
-      } else {
-        spicer += (int) *parseePtr;
-      }
+      spicer = spicer << (int) *parseePtr * 2; 
     }
     parseePtr++;
   }
@@ -31,7 +27,7 @@ int comparePrimitiveCheckSums(char parsee1[], char parsee2[]) {
   if (getPrimitiveCheckSum(parsee1) == getPrimitiveCheckSum(parsee2)) {
     return 1;
   } else {
-    return 0;
+    return;
   }
 }
 
