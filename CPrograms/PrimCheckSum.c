@@ -27,11 +27,18 @@ int comparePrimitiveCheckSums(char parsee1[], char parsee2[]) {
   if (getPrimitiveCheckSum(parsee1) == getPrimitiveCheckSum(parsee2)) {
     return 1;
   } else {
-    return;
+    return 0;
   }
 }
 
 int main(int argc, char *argv[]) {
-  printf("Decimal: %u\n", getPrimitiveCheckSum(argv[1]));
-  printf("Hex: 0x%x\n", getPrimitiveCheckSum(argv[1]));
+  int currentIndex = 1;
+  argv++;
+  while (*argv != NULL) {
+    printf("Current String: %s\n", *argv);
+    printf("Decimal: %u\n", getPrimitiveCheckSum(argv[currentIndex]));
+    printf("Hex: 0x%x\n", getPrimitiveCheckSum(argv[currentIndex]));
+    currentIndex++;
+    argv++;
+  }
 }
