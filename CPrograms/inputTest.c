@@ -5,7 +5,7 @@ int main() {
     int *ptrx = &x;
     printf("Enter something and I will tell you the RAM Adress of it! \nInput: ");
     scanf("%d", &x);
-    printf("This variable resides at: %p", (void *) ptrx);
+    printf("This variable resides at: %p\n", (void *) ptrx);
 
     return 0;
 }
