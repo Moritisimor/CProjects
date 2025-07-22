@@ -32,13 +32,11 @@ int comparePrimitiveCheckSums(char parsee1[], char parsee2[]) {
 }
 
 int main(int argc, char *argv[]) {
-  int currentIndex = 1;
   argv++;
   while (*argv != NULL) {
     printf("Current String: %s\n", *argv);
-    printf("Decimal: %u\n", getPrimitiveCheckSum(argv[currentIndex]));
-    printf("Hex: 0x%x\n", getPrimitiveCheckSum(argv[currentIndex]));
-    currentIndex++;
+    printf("Decimal: %u\n", getPrimitiveCheckSum(*argv));
+    printf("Hex: 0x%x\n", getPrimitiveCheckSum(*argv));
     argv++;
   }
 }
